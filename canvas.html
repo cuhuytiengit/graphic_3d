@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id = 'Canvas' height = '500', width = '500' style = "border:1px solid black"></canvas>
+
+    <!--Vẽ hình lập phương-->
+    <script>
+        //create Variable
+        var canvas = document.getElementById('Canvas');
+        var context = canvas.getContext('2d');
+        // vẽ hình vuông
+        context.fillStyle = 'green';
+        context.fillRect(100,100, 200,250);
+        //vẽ đường thứ nhất
+        context.moveTo(200,50);
+        context.lineTo(100,100);
+         //vẽ đường thứ 2
+        context.moveTo(200,50);
+        context.lineTo(400,50);
+
+        //vẽ đường thứ 3
+        context.moveTo(400, 50);
+        context.lineTo(300,100);
+        //vẽ đường thu 4;
+        context.moveTo(400,50);
+        context.lineTo(400,280);
+
+        //vẽ đường thứ 5;
+        context.moveTo(400,280);
+        context.lineTo(300,350)
+
+        //vẽ hình
+        context.stroke();
+
+
+        
+    </script>
+
+    <canvas id="Canvas1" height = '200', width = '300', style="border: 1px solid black ;" style = 'margin-top: 50px;' ></canvas>
+    <script>
+        var canvas1 = document.getElementById('Canvas1');
+        var context1 = canvas1.getContext('2d');
+        context1.font = '30pt Arail';
+        context1.fillStyle = 'red';
+        context1.fillText('Cù Huy Tiến', 20, 50);
+    </script>
+</body>
+
+</html>
