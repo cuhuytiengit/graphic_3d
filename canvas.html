@@ -42,13 +42,72 @@
         
     </script>
 
-    <canvas id="Canvas1" height = '200', width = '300', style="border: 1px solid black ;" style = 'margin-top: 50px;' ></canvas>
+    <!--VIẾT CHỮ-->
+    <canvas
+    id="Canvas1" height = '200', width = '300', style="border: 1px solid black ;" style = 'margin-top: 50px;' >
+   </canvas>
     <script>
         var canvas1 = document.getElementById('Canvas1');
         var context1 = canvas1.getContext('2d');
         context1.font = '30pt Arail';
         context1.fillStyle = 'red';
         context1.fillText('Cù Huy Tiến', 20, 50);
+    </script>
+     
+
+     <!--gradient thang dung-->
+    <canvas id='canvas2' width="200" height="200" style = 'border:1px solid black;'></canvas>
+    <script>
+        var canvas2 = document.getElementById('canvas2');
+        var context2 =  canvas2.getContext('2d');
+        var grd = context2.createLinearGradient(0,0,300,0);
+        grd.addColorStop(0.1,'blue');
+        grd.addColorStop(0.2,'red');
+        grd.addColorStop(0.3,'green');
+        grd.addColorStop(0.4,'orange');
+        grd.addColorStop(0.5,'grey');
+        grd.addColorStop(0.6,'brown');
+        grd.addColorStop(1,'white');
+        context2.fillStyle = grd;
+        context2.fillRect(0,50,200,100);
+    </script>
+
+    <!--gradient hinh tron-->
+        
+        <canvas id="canvas4" height = '300' width = '300' style = 'border: 1px solid black;'></canvas>
+        <script>
+            var canvas4 = document.getElementById('canvas4');
+            var context4 = canvas4.getContext('2d');
+            var grd = context4.createRadialGradient(115, 100, 10, 90, 100, 300);
+            grd.addColorStop(0.1,'blue');
+            grd.addColorStop(0.2,'red');
+            grd.addColorStop(0.3,'green');
+            grd.addColorStop(0.4,'orange');
+            grd.addColorStop(0.5,'grey');
+            grd.addColorStop(0.6,'brown');
+            grd.addColorStop(1,'white');
+            context4.fillStyle = grd;
+            context4.fillRect(10,10,200,200);
+        </script>
+
+    <!--ve tam giac-->
+
+    <canvas id="canvas5" width = '300' height = '300', style = 'border: 1px solid black;'></canvas>
+    <script>
+        var canvas5 = document.getElementById('canvas5');
+        var context5 = canvas5.getContext('2d');
+        
+        context5.beginPath();
+        context5.moveTo(50,50);
+        context5.lineTo(200,100);
+
+        context5.moveTo(100,200);
+        context5.lineTo(50,50);
+
+        context5.moveTo(200,100);
+        context5.lineTo(100,200);
+
+        context5.stroke();
     </script>
 </body>
 
