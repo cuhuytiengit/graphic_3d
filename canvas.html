@@ -5,12 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
 </head>
 <body>
-    <canvas id = 'Canvas' height = '500', width = '500' style = "border:1px solid black"></canvas>
+    <!-- <canvas id = 'Canvas' height = '500', width = '500' style = "border:1px solid black"></canvas> -->
 
     <!--Vẽ hình lập phương-->
-    <script>
+    <!-- <script>
         //create Variable
         var canvas = document.getElementById('Canvas');
         var context = canvas.getContext('2d');
@@ -27,23 +28,24 @@
         //vẽ đường thứ 3
         context.moveTo(400, 50);
         context.lineTo(300,100);
+
         //vẽ đường thu 4;
         context.moveTo(400,50);
         context.lineTo(400,280);
 
         //vẽ đường thứ 5;
         context.moveTo(400,280);
-        context.lineTo(300,350)
+        context.lineTo(300,350);
+        
 
         //vẽ hình
         context.stroke();
 
 
         
-    </script>
-
-    <!--VIẾT CHỮ-->
-    <canvas
+    </script> -->
+    <!--viet chu-->
+    <!-- <canvas
     id="Canvas1" height = '200', width = '300', style="border: 1px solid black ;" style = 'margin-top: 50px;' >
    </canvas>
     <script>
@@ -52,11 +54,11 @@
         context1.font = '30pt Arail';
         context1.fillStyle = 'red';
         context1.fillText('Cù Huy Tiến', 20, 50);
-    </script>
+    </script> -->
      
 
      <!--gradient thang dung-->
-    <canvas id='canvas2' width="200" height="200" style = 'border:1px solid black;'></canvas>
+    <!-- <canvas id='canvas2' width="200" height="200" style = 'border:1px solid black;'></canvas>
     <script>
         var canvas2 = document.getElementById('canvas2');
         var context2 =  canvas2.getContext('2d');
@@ -70,10 +72,10 @@
         grd.addColorStop(1,'white');
         context2.fillStyle = grd;
         context2.fillRect(0,50,200,100);
-    </script>
+    </script> -->
 
     <!--gradient hinh tron-->
-        
+<!--         
         <canvas id="canvas4" height = '300' width = '300' style = 'border: 1px solid black;'></canvas>
         <script>
             var canvas4 = document.getElementById('canvas4');
@@ -88,11 +90,11 @@
             grd.addColorStop(1,'white');
             context4.fillStyle = grd;
             context4.fillRect(10,10,200,200);
-        </script>
+        </script> -->
 
     <!--ve tam giac-->
 
-    <canvas id="canvas5" width = '300' height = '300', style = 'border: 1px solid black;'></canvas>
+    <!-- <canvas id="canvas5" width = '300' height = '300', style = 'border: 1px solid black;'></canvas>
     <script>
         var canvas5 = document.getElementById('canvas5');
         var context5 = canvas5.getContext('2d');
@@ -108,7 +110,103 @@
         context5.lineTo(100,200);
 
         context5.stroke();
-    </script>
+    </script> -->
+
+
+    <!--Vẽ hình esclips-->
+      <!-- <canvas id="canvas6" width = '300' height = '300', style = 'border: 1px solid black;'></canvas>
+    <script>
+        var canvas6 = document.getElementById('canvas6');
+        var context6 = canvas6.getContext('2d');
+        
+       context6.fillStyle = 'red';
+       context6.beginPath();
+       context6.ellipse(60,75,50,30,Math.PI * 0.25, 0, Math.PI*1.5);
+       context6.fill();
+
+       context6.fillStyle = 'grreen';
+       context6.beginPath();
+       context6.ellipse(150,75,50,30,Math.PI * 0.25, 0, Math.PI);
+       context6.fill();
+
+
+       context6.fillStyle = 'blue';
+       context6.beginPath();
+       context6.ellipse(240,75,50,30,Math.PI*0.25, 0, Math.PI, true);
+       context6.fill();
+
+    </script> -->
+
+
+     <!--vẽ dãi màu ô vuông-->
+
+
+     <canvas id="canvas6" width = '150' height = '150', style = 'border: 1px solid black;'></canvas>
+     <script>
+         var canvas6 = document.getElementById('canvas6');
+         var context6 = canvas6.getContext('2d');
+          for (var i = 0; i < 6; i++) {
+          for (var j = 0; j < 6; j++) {
+               context6.fillStyle = 'rgb(' + Math.floor(255 - 42.5 * i) + ', ' +
+                       Math.floor(255 - 42.5 * j) + ', 0)';
+                context6.fillRect(j * 25, i * 25, 25, 25);
+    }
+  }
+ 
+     </script>
+
+
+     <!--vẽ hinh tròn có viền-->
+
+     <canvas id="canvas7" width = '150' height = '150', style = 'border: 1px solid black;'></canvas>
+     <script>
+         var canvas6 = document.getElementById('canvas7');
+         var context6 = canvas6.getContext('2d');
+         for (var i = 0; i < 6; i++) {
+          for (var j = 0; j < 6; j++) {
+        context6.strokeStyle = 'rgb(0, ' + Math.floor(255 - 42.5 * i) + ', ' +
+                         Math.floor(255 - 42.5 * j) + ')';
+        context6.beginPath();
+        context6.arc(12.5 + j * 25, 12.5 + i * 25, 10, 0, Math.PI * 2, true);
+        context6.stroke();
+      }
+    }
+  
+ 
+     </script>
+
+
+<canvas id="canvas8" width = '150' height = '150', style = 'border: 1px solid black;'></canvas>
+<script>
+    var canvas6 = document.getElementById('canvas8');
+    var context6 = canvas6.getContext('2d');
+    context6.fillStyle = '#FD0';
+  context6.fillRect(0, 0, 75, 75);
+  context6.fillStyle = '#6C0';
+  context6.fillRect(75, 0, 75, 75);
+  context6.fillStyle = '#09F';
+  context6.fillRect(0, 75, 75, 75);
+  context6.fillStyle = '#F30';
+  context6.fillRect(75, 75, 75, 75);
+  context6.fillStyle = '#FFF';
+
+  // set transparency value
+  context6.globalAlpha = 0.2;
+
+  // Draw semi transparent circles
+  for (var i = 0; i < 7; i++) {
+    context6.beginPath();
+    context6.arc(75, 75, 10 + 10 * i, 0, Math.PI * 2, true);
+    context6.fill();
+ }
+
+
+</script>
+
+
+
+ 
+
 </body>
 
 </html>
